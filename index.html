@@ -72,6 +72,39 @@
             background: rgba(219, 234, 255, 0.7);
         }
 
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff7aa2, transparent);
+            border-radius: 50%;
+            animation: explode 2s ease-out infinite;
+        }
+
+        .firework:nth-child(1) {
+            top: 20%;
+            left: 30%;
+            animation-delay: 0s;
+        }
+
+        .firework:nth-child(2) {
+            top: 40%;
+            left: 60%;
+            animation-delay: 0.5s;
+        }
+
+        .firework:nth-child(3) {
+            top: 50%;
+            left: 20%;
+            animation-delay: 1s;
+        }
+
+        .firework:nth-child(4) {
+            top: 70%;
+            left: 80%;
+            animation-delay: 1.5s;
+        }
+
         @keyframes float {
             0% {
                 transform: translateY(0);
@@ -84,6 +117,24 @@
             100% {
                 transform: translateY(0);
                 opacity: 1;
+            }
+        }
+
+        @keyframes explode {
+            0% {
+                width: 10px;
+                height: 10px;
+                opacity: 1;
+            }
+            50% {
+                width: 100px;
+                height: 100px;
+                opacity: 0.7;
+            }
+            100% {
+                width: 150px;
+                height: 150px;
+                opacity: 0;
             }
         }
 
@@ -111,6 +162,11 @@
         <div style="top: 70%; left: 70%; animation-duration: 10s;"></div>
         <div style="top: 40%; left: 80%; animation-duration: 6s;"></div>
         <div style="top: 60%; left: 20%; animation-duration: 14s;"></div>
+
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
     </div>
 
     <div class="container">
